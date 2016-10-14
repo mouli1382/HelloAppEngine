@@ -9,6 +9,10 @@ package chandramouli.goru.helloworld.backend;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
+import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.HashMap;
+import java.util.logging.Logger;
 
 import javax.inject.Named;
 
@@ -25,6 +29,14 @@ import javax.inject.Named;
         )
 )
 public class MyEndpoint {
+    private static final Logger log = Logger.getLogger(MyEndpoint.class.getName());
+
+    public MyEndpoint() {
+        log.info("Starting ....");
+
+        //Initialize firebase here.
+        new FirebaseAuthUtils();
+    }
 
     /**
      * A simple endpoint method that takes a name and says Hi back
@@ -36,5 +48,17 @@ public class MyEndpoint {
 
         return response;
     }
+
+    @ApiMethod(name = "createCustomToken")
+    public MyBean createCustomToken(@Named("uid") String uid, @Named("phoneNumber") String phoneNumber) {
+        HashMap<String, Object> additionalClaims = new HashMap<>();
+        additionalClaims.put("phoneNumber", phoneNumber);
+        String customToken = FirebaseAuth.getInstance().createCustomToken(uid, additionalClaims);
+        MyBean response = new MyBean();
+        response.setData(customToken);
+
+        return response;
+    }
+
 
 }

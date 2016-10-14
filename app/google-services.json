@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "644285397339",
+    "firebase_url": "https://helloworld-146218.firebaseio.com",
+    "project_id": "helloworld-146218",
+    "storage_bucket": "helloworld-146218.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644285397339:android:0fa514199492982e",
+        "android_client_info": {
+          "package_name": "chandramouli.goru.helloworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644285397339-ni5885sia4dudd906sad0qm2u8bh11oa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "chandramouli.goru.helloworld",
+            "certificate_hash": "FCC505D0DABF33A9F1B6B96FC21D28C916B2F361"
+          }
+        },
+        {
+          "client_id": "644285397339-alv2ko8qnshnbter7af5k760fb8teekv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8x-i9_dayzAV_wXNGOevXcTszhEcM2JY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644285397339-alv2ko8qnshnbter7af5k760fb8teekv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
